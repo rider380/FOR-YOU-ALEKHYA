@@ -4,80 +4,12 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#08070d">
 <title>For Alekhya Pichidi — Our Little Cinema</title>
- /* Floating love hearts */
-.love-float {
-position: fixed;
-bottom: -50px;
-left: 0;
-z-index: 9999;
-pointer-events: none;
-font-size: 25px;
-animation: loveRise 7s linear forwards;
-filter: drop-shadow(0 0 8px rgba(255, 80, 140, 0.7));
-}
-
-@keyframes loveRise {
-0% {
-transform: translateY(0) translateX(0) scale(0.7) rotate(0deg);
-opacity: 0;
-}
-15% {
-opacity: 1;
-}
-80% {
-opacity: 0.9;
-}
-100% {
-transform: translateY(-110vh) translateX(35px) scale(1.4) rotate(25deg);
-opacity: 0;
-}
-}
-
-/* Alekhya and Pichidhi romantic glow */
-.love-names {
-text-align: center;
-color: #ffb6d5;
-text-shadow: 0 0 8px #ff4d94, 0 0 18px #ff80b5;
-animation: nameGlow 2s ease-in-out infinite alternate;
-}
-
-@keyframes nameGlow {
-from {
-text-shadow: 0 0 5px #ff4d94;
-transform: scale(1);
-}
-to {
-text-shadow: 0 0 15px #ff80b5, 0 0 25px #ff4d94;
-transform: scale(1.04);
-}
-}
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
 :root{--bg:#08070d;--gold:#e8c88b;--cream:#f5eee5;--muted:#b9aeb8;--wine:#6c183a}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Manrope,Arial,sans-serif;overflow-x:hidden}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 15% 10%,#45142c66,transparent 40%),radial-gradient(ellipse at 85% 60%,#17204455,transparent 42%),linear-gradient(180deg,#08070d,#100911 55%,#07070b)}
  <script>
-(function () {
-  const hearts = ["❤️", "💗", "💕", "💖", "🤍"];
-
-  function createHeart() {
-    const heart = document.createElement("span");
-    heart.className = "love-float";
-    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
-    heart.style.left = Math.random() * 95 + "vw";
-    heart.style.animationDuration = (5 + Math.random() * 4) + "s";
-    heart.style.fontSize = (16 + Math.random() * 18) + "px";
-
-    document.body.appendChild(heart);
-
-    setTimeout(function () {
-      heart.remove();
-    }, 9500);
-  }
-
-  setInterval(createHeart, 900);
-})();
 </script>
 
 #stars{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.55}
