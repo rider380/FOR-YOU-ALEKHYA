@@ -7,6 +7,19 @@
 <meta name="theme-color" content="#08070d">
 <title>For Alekhya Pichidi — Our Little Cinema</title>
 
+<!-- Prevent old #our-film links from skipping the front page -->
+<script>
+(function () {
+  if (window.location.hash === '#our-film') {
+    history.replaceState(
+      null,
+      '',
+      window.location.pathname + window.location.search
+    );
+  }
+})();
+</script>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
 
